@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 //Para estilizar
 import { StyleSheet } from 'react-native';
 
-import MapView from 'react-native-maps';
+import MapView , { Marker } from 'react-native-maps';
 //Pedir permissão, e pegar a posição.
 import { requestPermissionsAsync, getCurrentPositionAsync  } from 'expo-location'
 
@@ -39,7 +39,18 @@ function Main() {
         return null;
     }
 
-    return <MapView initialRegion={currentRegion} style={styles.map}/>
+    /*
+    Editora:
+        Latitude: -25,448128
+        Longitude: -49,303039
+
+    */
+    return (
+        <MapView initialRegion={currentRegion} style={styles.map}>
+            <Marker coordinate={{ latitude: -25.448128 , longitude: -49.303039}}/>
+            <Marker coordinate={{ latitude: -25.4533147 , longitude: -49.3033759}}/>
+        </MapView>
+    );
 }
 
 const styles = StyleSheet.create({
