@@ -25,8 +25,8 @@ Mapa, câmera, geolocalização.
 Com o Expo: ele gerencia com o javascript.
 * Tem que instalar o Aplicativo Expo nos devices !!!
 
-Tem limitações...
-Não suporta, Bluetooth no momento ...
+Tem limitações.<br/>
+Não suporta, Bluetooth no momento 
 ----------------------------------------------
 
 Instalar o Expo:
@@ -37,18 +37,17 @@ Procurar na web por: yarn global path ...
 (https://yarnpkg.com/lang/en/docs/cli/global/)
 
 Tem que adicionar no arquivo de inicialização:
-export PATH="$(yarn global bin):$PATH"
+### `export PATH="$(yarn global bin):$PATH"`
 
 fazer: 
-$ cd ~
-$ code .bash_profile
+$ cd ~<br/>
+$ code .bash_profile<br/>
 
 o arquivo pode ser: 
-.bash_profile
-.bashrc
-.profile 
-
-ou 
+.bash_profile<br/>
+.bashrc<br/>
+.profile <br/>
+ou <br/>
 .zshrc
 ---------------------------------------------
 ## COMEÇANDO: 
@@ -56,21 +55,20 @@ Para iniciar o APP com o Expo...:
 ### `expo init mobile`
 
 Para buscar latitude e longitude de algum local,
-podemos usar o google maps.
-Editora:
-Latitude: -25,448128
-Longitude: -49,303039
+podemos usar o google maps.<br/>
+Editora:<br/>
+Latitude: -25,448128<br/>
+Longitude: -49,303039<br/>
 
-Para instalar o EXPO no emulador: Rocketseat
+Para instalar o EXPO no emulador: Rocketseat<br/>
 https://www.youtube.com/watch?v=eSjFDWYkdxM
 
-Pesquisar pelo documento: Expo commom issues Rocketseat 
-...
+Pesquisar pelo documento: Expo commom issues Rocketseat ...
 
 ## Para abrir o menu:
-Android: Command M 
-IOS: Command D
-Device: Chacoalhar o device 
+Android: Command M <br/>
+IOS: Command D<br/>
+Device: Chacoalhar o device <br/>
 
 ## Detalhes React Native:
 elementos :
@@ -86,7 +84,6 @@ font-weight ... usamos fontWeight
 
 * Não repassa o estilo aos elementos filho...
 Cada elemento precisa de sua estilização...
----
 
 ## Babel:
 Javascript moderno ... porem com o babel ele converte o js, para versões que precisem ...
@@ -113,7 +110,7 @@ https://reactnavigation.org/docs/en/hello-react-navigation.html
 Instalar: (navegação por pilha, via botao...)
 ### `yarn add react-navigation-stack`
 
-Existe a navegação: Por abas... ou via Drawer (Puxando o menu)...
+Existe a navegação: Por abas... ou via Drawer (Puxando o menu).
 --------------
 https://docs.expo.io/versions/v36.0.0/sdk/map-view/
 Instalando a biblioteca de mapas:
