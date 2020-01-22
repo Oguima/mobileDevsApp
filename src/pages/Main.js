@@ -1,7 +1,7 @@
 //Mapa...
 import React, { useEffect, useState } from 'react';
 //Para estilizar
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
 import MapView , { Marker } from 'react-native-maps';
 //Pedir permissão, e pegar a posição.
@@ -48,7 +48,9 @@ function Main() {
     return (
         <MapView initialRegion={currentRegion} style={styles.map}>
             <Marker coordinate={{ latitude: -25.448128 , longitude: -49.303039}}/>
-            <Marker coordinate={{ latitude: -25.4533147 , longitude: -49.3033759}}/>
+            <Marker coordinate={{ latitude: -25.4533147 , longitude: -49.3033759}}>
+                <Image style={styles.avatar} source={{uri: 'https://avatars3.githubusercontent.com/u/2325202?s=460&v=4' }} />
+            </Marker>
         </MapView>
     );
 }
@@ -57,6 +59,15 @@ const styles = StyleSheet.create({
     map: {
         flex:1
     },
+
+    avatar: {
+        width: 54,
+        height: 54,
+        borderRadius: 4,
+        borderWidth: 4,
+        borderColor: '#FFF'
+    },
+    
 });
 
 export default Main;
