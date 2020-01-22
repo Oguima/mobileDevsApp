@@ -8,7 +8,7 @@ import MapView , { Marker, Callout } from 'react-native-maps';
 import { requestPermissionsAsync, getCurrentPositionAsync  } from 'expo-location'
 
 //<MapView style={{ flex: 1 }}/>
-function Main() {
+function Main({ navigation }) {
     const [currentRegion , setCurrentRegion] = useState(null);
 
     //Executa uma única vez...
@@ -50,7 +50,10 @@ function Main() {
             <Marker coordinate={{ latitude: -25.448128 , longitude: -49.303039}}/>
             <Marker coordinate={{ latitude: -25.4533147 , longitude: -49.3033759}}>
                 <Image style={styles.avatar} source={{uri: 'https://avatars3.githubusercontent.com/u/2325202?s=460&v=4' }} />
-                <Callout>
+                <Callout onPress={() => {
+                    //navegacao: Chamar webview, com github...
+                    navigation.navigate('Profile' , { github_username: 'oguima' });
+                }}>
                     <View style={styles.callout}>
                         <Text style={styles.devName}>Rafael Guimarães</Text>
                         <Text style={styles.devBio}>Desenvolvedor Mobile, amante de interatividades e jogos.</Text>
