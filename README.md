@@ -1,7 +1,11 @@
 22/01
-## APP - ReactNative - OmminiStack 10
+<h1 align="center">APP - ReactNative - OmminiStack 10</h1>
 
+<p align="center">
 React Native + Expo !!! 
+</p>
+
+![Hero Image with Logo](./.github/sc01.png)
 
 ## Nativo:
 IOS - Objective-C Swift - .ipa
