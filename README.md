@@ -5,6 +5,12 @@
 React Native + Expo !!! 
 </p>
 
+<p align="center">
+    <a href="https://twitter.com/intent/follow?screen_name=oguima">
+        <img src="https://img.shields.io/twitter/url?label=Oguima&style=social&url=http%3A%2F%2Ftwitter.com%2Foguima" alt="Follow @oguima" />
+    </a>
+</p>
+
 ![Hero Image with Logo](./.github/sc01.png)
 
 ## React Native.
