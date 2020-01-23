@@ -1,4 +1,4 @@
-22/01
+22/01/2020
 <h1 align="center">APP - ReactNative - OmminiStack 10</h1>
 
 <p align="center">
