@@ -7,11 +7,6 @@ React Native + Expo !!!
 
 ![Hero Image with Logo](./.github/sc01.png)
 
-## Nativo:
-IOS - Objective-C Swift - .ipa
-Android - Java Kotlin - .apk
----
-
 ## React Native.
 2015 ... pra frente - 
 Todo codigo, Javascript.
@@ -29,7 +24,7 @@ Mapa, câmera, geolocalização.
 Com o Expo: ele gerencia com o javascript.
 * Tem que instalar o Aplicativo Expo nos devices !!!
 
-Tem limitações.<br/>
+Tem limitações<br/>
 Não suporta, Bluetooth no momento 
 ----------------------------------------------
 
@@ -55,16 +50,10 @@ ou <br/>
 .zshrc
 ---------------------------------------------
 ## COMEÇANDO: 
-Para iniciar o APP com o Expo...:
+Para começar o desenvolvimento do APP com o Expo, do zero...:
 ### `expo init mobile`
 
-Para buscar latitude e longitude de algum local,
-podemos usar o google maps.<br/>
-Editora:<br/>
-Latitude: -25,448128<br/>
-Longitude: -49,303039<br/>
-
-Para instalar o EXPO no emulador: Rocketseat<br/>
+Para instalar o EXPO no emulador:<br/>
 https://www.youtube.com/watch?v=eSjFDWYkdxM
 
 Pesquisar pelo documento: Expo commom issues Rocketseat ...
