@@ -10,35 +10,14 @@ import { requestPermissionsAsync, getCurrentPositionAsync  } from 'expo-location
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '../services/api';
+import { connect, disconnect} from '../services/socket';
+//import { setupWebsocket } from '../../../backendDevsApp/src/websocket';
 
 //<MapView style={{ flex: 1 }}/>
 function Main({ navigation }) {
     const [devs , setDevs] = useState([]);
     const [currentRegion , setCurrentRegion] = useState(null);
     const [techs , setTechs] = useState('');
-
-    async function loadDevs() {
-        const { latitude, longitude } = currentRegion;
-
-        //para testar: techs: 'ReactJS'
-        const response = await api.get('/search' , {
-            params: {
-                latitude,
-                longitude,
-                techs
-            }
-        });
-
-        console.log(response.data);
-
-        setDevs(response.data);
-    }
-
-    function handleRegionChanged(region) {
-        console.log(region);
-
-        setCurrentRegion(region);
-    };
 
     //Executa uma única vez...
     useEffect(() => {
@@ -63,10 +42,45 @@ function Main({ navigation }) {
         }
         loadInitialPosition();
     }, []);
+    
+    function setupWebsocket() {
+        const { latitude, longitude } = currentRegion;
+    
+        connect(
+            latitude,
+            longitude,
+            techs,
+        );
+    }
 
+    async function loadDevs() {
+        const { latitude, longitude } = currentRegion;
+
+        //para testar: techs: 'ReactJS'
+        const response = await api.get('/search' , {
+            params: {
+                latitude,
+                longitude,
+                techs
+            }
+        });
+
+        console.log(response.data);
+
+        setDevs(response.data);
+        setupWebsocket();
+    }
+
+    function handleRegionChanged(region) {
+        console.log(region);
+
+        setCurrentRegion(region);
+    };
+    
     if (!currentRegion) {
         return null;
     }
+
 
     /*
     Editora:
