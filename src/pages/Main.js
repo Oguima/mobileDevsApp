@@ -10,7 +10,7 @@ import { requestPermissionsAsync, getCurrentPositionAsync  } from 'expo-location
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '../services/api';
-import { connect, disconnect} from '../services/socket';
+import { connect, disconnect, subscribeToNewDevs} from '../services/socket';
 //import { setupWebsocket } from '../../../backendDevsApp/src/websocket';
 
 //<MapView style={{ flex: 1 }}/>
@@ -42,8 +42,14 @@ function Main({ navigation }) {
         }
         loadInitialPosition();
     }, []);
+
+    useEffect(() => {
+        subscribeToNewDevs(dev => setDevs([...devs, dev]));
+    }, [devs]);
     
     function setupWebsocket() {
+        disconnect();
+
         const { latitude, longitude } = currentRegion;
     
         connect(
